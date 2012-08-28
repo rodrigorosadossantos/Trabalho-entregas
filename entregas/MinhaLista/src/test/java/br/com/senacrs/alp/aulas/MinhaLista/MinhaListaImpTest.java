@@ -58,6 +58,19 @@ public class MinhaListaImpTest {
 		fail("Not yet implemented");
 	}
 
+	private String obterSufixo(MinhaListaImp<String> obj) {
+		
+		String resultado = null;
+		Nodo<String> nodo = null;
+		nodo = obj .getInicio();
+		while(nodo.getProximo() != null){
+		nodo = nodo.getProximo();
+		}
+		resultado = nodo.getValor();
+		
+		return resultado;
+	}
+
 	@Test
 	public void testPrefixar() {
 		fail("Not yet implemented");
