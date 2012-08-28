@@ -10,11 +10,11 @@ public class Main
 		MinhaLista<Integer> lista2 = 
 				new MinhaListaImp<Integer>(Integer.valueOf(0));
 		
-		System.out.println(lista.tamanho());
-		System.out.println(lista.buscar(0));
+		System.out.println(lista2.tamanho());
+		System.out.println(lista2.buscar(0));
 		lista.prefixar("novoInicio");
 		lista.sufixar("novoFim");
-		System.out.println(lista.tamanho());
+		System.out.println(lista2.tamanho());
 			
 	}
 

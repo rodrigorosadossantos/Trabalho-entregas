@@ -5,11 +5,16 @@ public class MinhaListaImp<Tipo> implements MinhaLista<Tipo> {
 	private Nodo<Tipo> inicio = null;
 
 	public MinhaListaImp(Tipo valorInicio) {
+		
+		if(valorInicio == null){
+			
+			throw new IllegalArgumentException();	
+		}
 		this.inicio = new Nodo<Tipo>(valorInicio);
-
+		
 	}
 
-	public Nodo<Tipo> getInicio() {
+	protected Nodo<Tipo> getInicio() {
 		return inicio;
 	}
 
@@ -29,7 +34,7 @@ public class MinhaListaImp<Tipo> implements MinhaLista<Tipo> {
 		int tamanho = tamanho();
 		Nodo<Tipo> resultado = buscarNodo(tamanho - 1);
 
-		return null;
+		return resultado;
 	}
 
 	private Nodo<Tipo> buscarNodo(int posicao) {
