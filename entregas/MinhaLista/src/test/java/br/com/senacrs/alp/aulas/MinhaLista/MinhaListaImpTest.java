@@ -62,7 +62,8 @@ public class MinhaListaImpTest {
 		
 		String resultado = null;
 		Nodo<String> nodo = null;
-		nodo = obj .getInicio();
+		
+		nodo = obj.getInicio();
 		while(nodo.getProximo() != null){
 		nodo = nodo.getProximo();
 		}
@@ -73,7 +74,34 @@ public class MinhaListaImpTest {
 
 	@Test
 	public void testPrefixar() {
-		fail("Not yet implemented");
+		
+		MinhaListaImp<String> obj = null;
+		String valor = null;
+		String prefixo = null;
+		
+		obj = new MinhaListaImp<String>("inicio");
+		valor = "valor";
+		obj.prefixar(valor);
+		prefixo = obterPrefixo(obj);
+		Assert.assertEquals(valor, prefixo);
+		
+		
+	}
+
+
+	private String obterPrefixo(MinhaListaImp<String> obj) {
+		
+		String resultado = null;
+		Nodo<String> nodo = null;
+		
+		nodo = obj.getInicio();
+		
+		
+		resultado = nodo.getValor();
+		
+		return resultado;
+		
+		
 	}
 
 	@Test
@@ -93,7 +121,21 @@ public class MinhaListaImpTest {
 
 	@Test
 	public void testTamanho() {
-		fail("Not yet implemented");
+		
+		MinhaListaImp<String> obj = null;
+		String resultado = null;
+		Nodo <String> nodo = null;
+		
+		obj = new MinhaListaImp<String> ("inicio");
+		
+		nodo = obj.getInicio();
+		
+		while(nodo.getProximo() != null){
+			nodo = nodo.getProximo();
+			}
+			resultado = nodo.getValor();
+			
+		
 	}
 
 }
